@@ -1,0 +1,130 @@
+html {
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+body {
+    font: 1.6rem Helvetica;
+    block-size: 100vh;
+    margin: 0;
+}
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    block-size: 100%;
+}
+.header {
+    grid-area: header;
+    background-color: #203040;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+}
+.brand a {
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+.header-links a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1rem;
+}
+.header-links a:hover {
+    color: #ff8000;
+}
+.main {
+    grid-area: main;
+}
+.footer {
+    grid-area: footer;
+    background-color: #203040;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+}
+a:hover{
+    color: #ff8000;
+}
+.brand button{
+    font-size: 3rem;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+.sidebar {
+    position: fixed;
+    transform: translateX(-30rem);
+    inline-size: 30rem;
+    background-color: #f0f0f0;
+    block-size: 100%;
+}
+.sidebar.open {
+    transform: translateX(0);
+}
+.sidebar-close-button {
+    border-radius: 50%;
+    border: 0.1rem #000000 solid;
+    inline-size: 3rem;
+    block-size: 3rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+    padding-block-start: 0;
+    cursor: pointer;
+    position: absolute;
+    inset-inline-end: 0.5rem;
+    inset-block-start: 1.5rem;
+}
+/* Product Screen */
+.products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.products li {
+    list-style-type: none;
+    padding: 0;
+    flex: 0 1 34rem;
+    margin: 1rem;
+    block-size: 50rem;
+    border-block-end: 0.1rem #c0c0c0 solid;
+}
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    block-size: 100%;
+}
+.product-name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.product-brand {
+    font-size: 1.2rem;
+    color: #808080;
+}
+.product-price {
+    font-size: 2rem;
+    font-weight:bold;
+}
+.product-image {
+    max-inline-size: 34rem;
+    max-block-size: 34rem;
+}
+.product-rating {
+    margin-block-end: 1rem;
+}
